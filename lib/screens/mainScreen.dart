@@ -10,24 +10,23 @@ class Mainscreen extends StatefulWidget {
 
 class _MainscreenState extends State<Mainscreen> {
   int selectedIndex = 0;
-  List pages = [
-    Homescreen(),
-    Center(child: Text("profile"),)
-  ];
-
+  List pages = [Homescreen(), Center(child: Text("profile"))];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: NavigationBar(destinations: [
-        NavigationDestination(icon: Icon(Icons.home), label: "Accueil"),
-        NavigationDestination(icon: Icon(Icons.home), label: "Profiles"),
-        
-      ], selectedIndex: selectedIndex, onDestinationSelected: (value) {
-        setState(() {
-          selectedIndex = value;
-        });
-      },),
+      bottomNavigationBar: NavigationBar(
+        destinations: [
+          NavigationDestination(icon: Icon(Icons.home), label: "Accueil"),
+          NavigationDestination(icon: Icon(Icons.person), label: "Profiles"),
+        ],
+        selectedIndex: selectedIndex,
+        onDestinationSelected: (value) {
+          setState(() {
+            selectedIndex = value;
+          });
+        },
+      ),
 
       body: pages[selectedIndex],
     );
