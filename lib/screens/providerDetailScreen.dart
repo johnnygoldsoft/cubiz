@@ -200,7 +200,7 @@ class ProviderDetailScreen extends ConsumerWidget {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          "${product.price.toStringAsFixed(2)} €",
+                          "${product.price.toStringAsFixed(2)} Cfa",
                           style: TextStyle(
                             color: Colors.green.shade600,
                             fontWeight: FontWeight.bold,

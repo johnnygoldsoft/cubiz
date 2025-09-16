@@ -34,7 +34,6 @@
             android:name="flutterEmbedding"
             android:value="2" />
 
-        <uses-permission android:name="android.permission.INTERNET"/>
 
     </application>
 
@@ -49,4 +48,7 @@
             <data android:mimeType="text/plain"/>
         </intent>
     </queries>
+
+            <uses-permission android:name="android.permission.INTERNET"/>
+
 </manifest>
